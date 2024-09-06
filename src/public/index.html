@@ -20,12 +20,12 @@
             <ul class="space-y-4">
                 <li class="bg-white p-4 rounded shadow">
                     <strong class="block mb-2">GET all subscribers:</strong>
-                    <a href="http://localhost:3000/subscribers" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers</a>
+                    <a href="https://get-youtube-subscribers-guhx.onrender.com/subscribers" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers</a>
                     <p class="mt-2 text-gray-600">Returns an array of all subscribers.</p>
                 </li>
                 <li class="bg-white p-4 rounded shadow">
                     <strong class="block mb-2">GET subscribers' names and channels:</strong>
-                    <a href="http://localhost:3000/subscribers/names" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers/names</a>
+                    <a href="https://get-youtube-subscribers-guhx.onrender.com/subscribers/names" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers/names</a>
                     <p class="mt-2 text-gray-600">Returns an array of subscribers with only name and subscribedChannel fields.</p>
                 </li>
                 <li class="bg-white p-4 rounded shadow ">
@@ -38,13 +38,13 @@
                         </button>
                     </div>
                     <p class="mt-2 text-gray-600">Returns a single subscriber object with the given ID. If the ID doesn't exist, it returns a 400 error.</p>
-                    <p class="mt-2 text-black font-bold">Note: Visit <a href="http://localhost:3000/subscribers" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers</a> and copy the subscriber ID from any user and paste it in the input box.  </p>
+                    <p class="mt-2 text-black font-bold">Note: Visit <a href="https://get-youtube-subscribers-guhx.onrender.com//subscribers" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers</a> and copy the subscriber ID from any user and paste it in the input box.  </p>
                 </li>
             </ul>
         </section>
         <section>
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">API Documentation</h2>
-            <a href="http://localhost:3000/subscribers/names" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">Documentation</a>
+            <a href="https://get-youtube-subscribers-guhx.onrender.com/subscribers/names" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">Documentation</a>
         </section>
 
         <section class="mb-8">
@@ -82,7 +82,7 @@
             getSubscriberButton.addEventListener('click', function() {
                 const id = subscriberIdInput.value.trim();
                 if (id) {
-                    sendRequest(`http://localhost:3000/subscribers/${id}`);
+                    sendRequest(`https://get-youtube-subscribers-guhx.onrender.com/subscribers/${id}`);
                     
 
                 } else {
