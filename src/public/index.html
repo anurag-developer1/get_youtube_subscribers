@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get YouTube Subscribers API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <h1 class="text-4xl font-bold text-center text-red-600 mb-8">Get YouTube Subscribers API</h1>
+        
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">About</h2>
+            <p class="text-gray-700">Welcome to the Get YouTube Subscribers API. This application allows you to retrieve information about YouTube subscribers using a MongoDB database.</p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">Available Endpoints</h2>
+            <ul class="space-y-4">
+                <li class="bg-white p-4 rounded shadow">
+                    <strong class="block mb-2">GET all subscribers:</strong>
+                    <a href="http://localhost:3000/subscribers" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers</a>
+                    <p class="mt-2 text-gray-600">Returns an array of all subscribers.</p>
+                </li>
+                <li class="bg-white p-4 rounded shadow">
+                    <strong class="block mb-2">GET subscribers' names and channels:</strong>
+                    <a href="http://localhost:3000/subscribers/names" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers/names</a>
+                    <p class="mt-2 text-gray-600">Returns an array of subscribers with only name and subscribedChannel fields.</p>
+                </li>
+                <li class="bg-white p-4 rounded shadow ">
+                    <strong class="block mb-2">GET subscriber by ID:</strong>
+                    <p class="text-gray-600 mb-2 break-all inline-block">/subscribers/:id</p>
+                    <div class="flex items-center flex-wrap gap-2 ">
+                        <input type="text" id="subscriberId" placeholder="Enter subscriber ID" class="border rounded px-2 py-1 mr-2 flex-grow max-w-full">
+                        <button id="getSubscriber" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded mt-2" >
+                            Get Subscriber
+                        </button>
+                    </div>
+                    <p class="mt-2 text-gray-600">Returns a single subscriber object with the given ID. If the ID doesn't exist, it returns a 400 error.</p>
+                    <p class="mt-2 text-black font-bold">Note: Visit <a href="http://localhost:3000/subscribers" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">/subscribers</a> and copy the subscriber ID from any user and paste it in the input box.  </p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">API Documentation</h2>
+            <a href="http://localhost:3000/subscribers/names" class="text-blue-500 hover:underline bg-gray-100 px-2 py-1 rounded font-mono break-all inline-block">Documentation</a>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">Usage</h2>
+            <p class="text-gray-700">To use this API, click on the endpoint URLs above or use the input field and button for the ID-specific endpoint. The browser will send a GET request to the specified URL.</p>
+        </section>
+
+      
+    </div>
+
+    <footer class="text-center mt-8 text-gray-500">
+        <p>© 2024 GetYouTube Subscribers API. All rights reserved.</p>
+    </footer>
+
+      <script>
+        window.addEventListener('load', function() {
+            
+            const subscriberIdInput = document.getElementById('subscriberId');
+            const getSubscriberButton = document.getElementById('getSubscriber');
+            
+           
+
+            function sendRequest(url) {
+                
+                window.location.href=url
+            }
+
+            document.body.addEventListener('click', function(e) {
+                if (e.target.tagName === 'a') {
+                    e.preventDefault();
+                    sendRequest(e.target.href);
+                }
+            });
+
+            getSubscriberButton.addEventListener('click', function() {
+                const id = subscriberIdInput.value.trim();
+                if (id) {
+                    sendRequest(`http://localhost:3000/subscribers/${id}`);
+                    
+
+                } else {
+                    alert('Please enter a subscriber ID');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
