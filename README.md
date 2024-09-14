@@ -14,7 +14,7 @@ Get YouTube Subscribers API is a backend server application that provides RESTfu
 - [Contact](#contact)
   
 ## Demo
-Check out the demo of the app on YouTube: [Get YouTube Subscribers API demo](https://get-youtube-subscribers-guhx.onrender.com)
+Check out the demo of the app on YouTube: [Get YouTube Subscribers API demo](https://youtu.be/jkuqSlSeBqQ?si=jKhojAevDm-cyW9Q)
 
 ## Features
 - Fetch all subscribers(baseUrl/subscribers)
@@ -58,6 +58,6 @@ This project is currently unlicensed. We are still determining the most appropri
 ## Contact
 Anurag - anuraagshrivastav202@gmail.com
 
-Project Link:[https://github.com/anurag-developer1/get_youtube_subscribers](https://github.com/anurag-developer1/get_youtube_subscribers)
+Project Link:[https://get-youtube-subscribers-guhx.onrender.com](https://get-youtube-subscribers-guhx.onrender.com)
 
 For any questions, suggestions, or discussions about the Get YouTube Subscribers API, feel free to reach out or open an issue on GitHub.
